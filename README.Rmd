@@ -1,0 +1,85 @@
+---
+title: "SNU-CAHL"
+author: "Don Park"
+date: "5/24/2017"
+output:
+  html_document:
+    highlight: tango
+    number_sections: yes
+    theme: lumen
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+  md_document:
+    variant: markdown_github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# SNU-CAHL
+
+Seoul National University - Climate Change Impact Assessment for Hydrology Library (SNU-CAHL) is a collection of tools for climate change impact assessment in hydrology.  The tool has three main goals:
+
+* Automation of hydrologic modelling in climate change scenarios.
+
+* Easily import and integrate climate data with hydrology data for multi-model analysis.
+
+* Provide the resources for informed decisions and conclusions through performance indexes.
+
+This tool was made by the Research Group for [Climate Change Adaptation in Water Resources](http://ccawr.snu.ac.kr) at Seoul National University.
+
+## Installation
+
+`snucahl` package requires the [hydromad package](http://hydromad.catchment.org/), which is a required dependency but is not available on CRAN.  Install `hydromad` with the following commands:
+
+```
+install.packages(c("zoo", "latticeExtra", "polynom", "car", "Hmisc","reshape"))
+install.packages("hydromad", repos = "http://hydromad.catchment.org")
+```
+
+`snucahl` can be installed and loaded using the following commands:
+
+```
+library("hydromad")
+some function to install snucahl
+library("snucahl")
+```
+
+
+
+
+## Using SNU-CAHL
+
+Something about using here
+
+## Data Sources
+
+Something about the Yongdam Data Source here
+
+## References
+
+References here
+
+
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
