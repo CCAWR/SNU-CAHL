@@ -12,5 +12,5 @@ GOFperformance(sim, obs)
 \item{obs}{numeric 'data.frame', 'matrix', or 'vector' with observed values}
 }
 \description{
-Performes Nash-Sutcliffe Efficiency, relative Nash-Sutcliffe Efficiency, Root Mean Square Error, Relative Root Mean Square Error, Ratio of RMSE to the standard deviation of the observations, Percent Bias, and Kling-Gupta Efficiency
+Performes Nash-Sutcliffe Efficiency, Root Mean Square Error, Relative Root Mean Square Error, Ratio of RMSE to the standard deviation of the observations, and Kling-Gupta Efficiency
 }
