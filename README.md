@@ -28,14 +28,9 @@ Installation
 Using SNU-CAHL
 --------------
 
-Will be updated soon.
+SNU-CAHL package can be used in two different manner. One is the library portion, which contains the functions within R specific to SNU-CAHL. The other is the `script/` folder which contains useful scripts used when running the full SNU-CAHL stack.
 
 Data Sources
 ------------
 
-Will be updated soon.
-
-References
-----------
-
-Will be updated soon.
+The test data supplied here are observed gauge datasets obtained from <http://www.wamis.go.kr> for the Yongdam Catchment in South Korea within the Geum River Basin (4001). The forecasted projections are from the Korea Meteorological Administration GCMs which were downscaled within CCAWR.

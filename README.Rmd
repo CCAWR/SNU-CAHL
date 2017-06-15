@@ -3,6 +3,8 @@ title: "SNU-CAHL"
 author: "Don Park"
 date: "5/24/2017"
 output:
+  md_document:
+    variant: markdown_github
   html_document:
     highlight: tango
     number_sections: yes
@@ -11,8 +13,6 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: no
-  md_document:
-    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
@@ -51,13 +51,10 @@ library("snucahl")
 
 ## Using SNU-CAHL
 
-Will be updated soon. 
+SNU-CAHL package can be used in two different manner.  One is the library portion, which contains the functions within R specific to SNU-CAHL.  The other is the `script/` folder which contains useful scripts used when running the full SNU-CAHL stack.  
 
 ## Data Sources
 
-Will be updated soon. 
+The test data supplied here are observed gauge datasets obtained from <http://www.wamis.go.kr> for the Yongdam Catchment in South Korea within the Geum River Basin (4001).  The forecasted projections are from the Korea Meteorological Administration GCMs which were downscaled within CCAWR.  
 
-## References
-
-Will be updated soon.
 

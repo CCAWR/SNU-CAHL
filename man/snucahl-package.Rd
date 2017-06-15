@@ -6,7 +6,7 @@
 \alias{snucahl-package}
 \title{SNU-CAHL Package}
 \description{
-Maintained by Seoul Nationaln University Research Group for Climate Change Adaptation in Water Resources.  Visit http://ccawr.snu.ac.kr/ for our homepage.
+Maintained by Seoul Nationaln University Research Group for Climate Change Adaptation in Water Resources.  Visit <http://ccawr.snu.ac.kr/> for our homepage.
 }
 \details{
 Functions are automatically imported from the library. Useful scripts are located in `scripts/` folder and examples are present in the `examples/` folder.
