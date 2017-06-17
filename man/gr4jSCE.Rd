@@ -9,7 +9,7 @@ gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
   transformed = TRUE)
 }
 \arguments{
-\item{inputdata}{Input data for GR4J model (requires Data$Q, Data$P, and Data$E) (mm/day)}
+\item{inputdata}{Input data (requires Data$Q, Data$P, and Data$E) (mm/day)}
 
 \item{seed}{Random number for sampling within SCE}
 
@@ -21,7 +21,7 @@ gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
 
 \item{x4}{X4 range}
 
-\item{warmup}{Number of Days to Warmup for GR4J}
+\item{warmup}{Number of Days to Warmup the hydrologic model}
 
 \item{ncomplex}{Number of Complexes for SCE}
 

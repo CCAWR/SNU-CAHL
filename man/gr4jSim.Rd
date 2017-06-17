@@ -2,12 +2,13 @@
 % Please edit documentation in R/gr4jSim.R
 \name{gr4jSim}
 \alias{gr4jSim}
-\title{Outputs GR4J Run with Observed Data}
+\title{Outputs GR4J modelled run with observed flow}
 \usage{
-gr4jSim(input, x1, x2, x3, x4, area, etmult = 1, transformed = TRUE)
+gr4jSim(input, x1, x2, x3, x4, area, etmult = 1, transformed = TRUE,
+  warmup = 365)
 }
 \arguments{
-\item{input}{data frame with P, precipitation, and E, evapotranspiration. (mm/day)}
+\item{input}{Input data (requires Data$Q, Data$P, and Data$E) (mm/day)}
 
 \item{x1}{Value for X1 Parameter in GR4J}
 
@@ -17,12 +18,12 @@ gr4jSim(input, x1, x2, x3, x4, area, etmult = 1, transformed = TRUE)
 
 \item{x4}{Value for X4 Parameter in GR4J}
 
-\item{area}{Study area in sq. km}
+\item{etmult}{Multiplier applied to Data$E to estimate potential evapotranspiration (default is 1)}
 
-\item{etmult}{Multiplier applied to Dataset$E to estimate potential evapotranspiration (default is 1)}
+\item{warmup}{Number of Days to Warmup the hydrologic model}
 
 \item{trasnformed}{Transformed parameters before use to improve identifiability}
 }
 \description{
-Outputs GR4J Run with Observed Data
+Outputs GR4J modelled run with observed flow
 }

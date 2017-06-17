@@ -2,13 +2,13 @@
 #'
 #' Outputs GR4J Parameters (non-transformed) and NSE value.
 #'
-#' @param inputdata Input data for GR4J model (requires Data$Q, Data$P, and Data$E) (mm/day)
+#' @param inputdata Input data (requires Data$Q, Data$P, and Data$E) (mm/day)
 #' @param seed Random number for sampling within SCE
 #' @param x1 X1 range
 #' @param x2 X2 range
 #' @param x3 X3 range
 #' @param x4 X4 range
-#' @param warmup Number of Days to Warmup for GR4J
+#' @param warmup Number of Days to Warmup the hydrologic model
 #' @param ncomplex Number of Complexes for SCE
 #' @param maxit Maximum number of iterations
 #' @param transformed GR4J Values already transformed for model performance
