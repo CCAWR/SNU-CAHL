@@ -4,9 +4,9 @@
 \alias{gr4jSCE}
 \title{Runs SCE Calibration for GR4J Model}
 \usage{
-gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
-  1000), x4 = c(0.5, 4), warmup = 365, ncomplex = 20, maxit = 200,
-  transformed = TRUE)
+gr4jSCE(inputdata, seed, x1 = c(100, 1200), x2 = c(-5, 3), x3 = c(20,
+  300), x4 = c(1.1, 3), warmup = 365, ncomplex = 20, maxit = 200,
+  transformed = FALSE)
 }
 \arguments{
 \item{inputdata}{Input data (requires Data$Q, Data$P, and Data$E) (mm/day)}

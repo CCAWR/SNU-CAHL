@@ -15,17 +15,25 @@
 #' @export
 #'
 
-gr4jSCE <- function(inputdata, seed, x1 = c(1,5000), x2 = c(-10,10), x3 = c(1,1000), x4 = c(0.5,4), warmup = 365, ncomplex = 20, maxit = 200, transformed = TRUE) {
+gr4jSCE <- function(inputdata, seed, x1 = c(100,1200), x2 = c(-5,3), x3 = c(20,300), x4 = c(1.1,3), warmup = 365, ncomplex = 20, maxit = 200, transformed = FALSE) {
 
   # Preparing Hydromad Framework
   runmodel <- hydromad(as.zoo(inputdata), sma = "gr4j", routing = "gr4jrouting", transformed = transformed)
   runmodel <- update(runmodel,newpars = gr4j.transformpar(c(hydromad.getOption("gr4j"), hydromad.getOption("gr4jrouting"))))
   runmodel <- update(runmodel,etmult = 1)
-  runmodel <- update(runmodel, x1 = gr4j.transformpar(list(x1 = x1))[["x1"]])
-  runmodel <- update(runmodel, x2 = gr4j.transformpar(list(x2 = x2))[["x2"]])
-  runmodel <- update(runmodel, x3 = gr4j.transformpar(list(x3 = x3))[["x3"]])
-  runmodel <- update(runmodel, x4 = gr4j.transformpar(list(x4 = x4))[["x4"]])
   
+  if (!transformed) {
+    runmodel <- update(runmodel, x1 = gr4j.transformpar(list(x1 = x1))[["x1"]])
+    runmodel <- update(runmodel, x2 = gr4j.transformpar(list(x2 = x2))[["x2"]])
+    runmodel <- update(runmodel, x3 = gr4j.transformpar(list(x3 = x3))[["x3"]])
+    runmodel <- update(runmodel, x4 = gr4j.transformpar(list(x4 = x4))[["x4"]])
+  } else {
+    runmodel <- update(runmodel, x1 = x1)
+    runmodel <- update(runmodel, x2 = x2)
+    runmodel <- update(runmodel, x3 = x3)
+    runmodel <- update(runmodel, x4 = x4)
+  }
+
   
   hydromad.options(warmup = warmup)
   hydromad.options(objective = ~hmadstat("r.squared")(Q, X))
@@ -47,7 +55,7 @@ gr4jSCE <- function(inputdata, seed, x1 = c(1,5000), x2 = c(-10,10), x3 = c(1,10
 
   nse <- NSE(Qmod, Qobs)
 
-  output <- data.frame(parameterlist, nse)
+  output <- data.frame(parameterlist, nse, transformed)
 
   return(output)
 }
