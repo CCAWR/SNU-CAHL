@@ -4,9 +4,8 @@
 \alias{gr4jSCE}
 \title{Runs SCE Calibration}
 \usage{
-gr4jSCE(inputdata, seed, x1 = log(c(1, 5000)), x2 = asinh(c(-10, 5)),
-  x3 = log(c(1, 500)), x4 = log(c(0.5, 4) - 0.5), transformed = FALSE,
-  warmup = 365, ncomplex = 20)
+gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
+  1000), x4 = c(1, 4), warmup = 365, ncomplex = 20, maxit = 200)
 }
 \arguments{
 \item{inputdata}{Input data for GR4J model (requires Data$Q, Data$P, and Data$E)}
@@ -20,8 +19,6 @@ gr4jSCE(inputdata, seed, x1 = log(c(1, 5000)), x2 = asinh(c(-10, 5)),
 \item{x3}{X3 range}
 
 \item{x4}{X4 range}
-
-\item{transformed}{Transformed parameters before use to improve identifiability}
 
 \item{warmup}{Number of Days to Warmup for GR4J}
 
