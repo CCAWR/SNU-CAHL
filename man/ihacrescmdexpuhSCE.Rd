@@ -5,11 +5,11 @@
 \title{Runs SCE Calibration for IHACRES CMD Model}
 \usage{
 ihacrescmdexpuhSCE(inputdata, seed, delay = 0, f = c(0.5, 1.3), e = 1,
-  d = 200, tau_s = c(10, 1000), tau_q = c(0, 10), v_s = c(0, 1),
-  warmup = 365, ncomplex = 20, maxit = 200)
+  d = 200, shape = c(0, 100), tau_s = c(10, 1000), tau_q = c(0, 10),
+  v_s = c(0, 1), warmup = 365, ncomplex = 20, maxit = 200)
 }
 \arguments{
-\item{inputdata}{Input data for GR4J model (requires Data$Q, Data$P, and Data$E) (mm/day)}
+\item{inputdata}{Input data (requires Data$Q, Data$P, and Data$E) (mm/day)}
 
 \item{seed}{Random number for sampling within SCE}
 
@@ -21,18 +21,20 @@ ihacrescmdexpuhSCE(inputdata, seed, delay = 0, f = c(0.5, 1.3), e = 1,
 
 \item{d}{CMD threshold producing flow}
 
+\item{shape}{shape}
+
 \item{tau_s}{time constraints}
 
 \item{tau_q}{time constraints}
 
 \item{v_s}{fractional volume}
 
-\item{warmup}{Number of Days to Warmup for GR4J}
+\item{warmup}{Number of Days to Warmup the hydrologic model}
 
 \item{ncomplex}{Number of Complexes for SCE}
 
 \item{maxit}{Maximum number of iterations}
 }
 \description{
-Outputs IHACRES CMD Parameters and NSE value.
+Outputs IHACRES CMD Parameters and NSE value with expuh routing model.
 }
