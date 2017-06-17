@@ -5,7 +5,7 @@
 \title{Runs SCE Calibration}
 \usage{
 gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
-  1000), x4 = c(1, 4), warmup = 365, ncomplex = 20, maxit = 200)
+  1000), x4 = c(0.5, 4), warmup = 365, ncomplex = 20, maxit = 200)
 }
 \arguments{
 \item{inputdata}{Input data for GR4J model (requires Data$Q, Data$P, and Data$E)}

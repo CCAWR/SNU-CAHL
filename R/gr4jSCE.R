@@ -11,7 +11,7 @@
 #' @export
 #'
 
-gr4jSCE <- function(inputdata, seed, x1 = c(1,5000), x2 = c(-10,10), x3 = c(1,1000), x4 = c(1,4), warmup = 365, ncomplex = 20, maxit = 200) {
+gr4jSCE <- function(inputdata, seed, x1 = c(1,5000), x2 = c(-10,10), x3 = c(1,1000), x4 = c(0.5,4), warmup = 365, ncomplex = 20, maxit = 200) {
 
   # Preparing Hydromad Framework
   runmodel <- hydromad(as.zoo(inputdata), sma = "gr4j", routing = "gr4jrouting", trasnformed = TRUE)
