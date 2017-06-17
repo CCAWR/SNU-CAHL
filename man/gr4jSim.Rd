@@ -9,17 +9,17 @@ gr4jSim(input, x1, x2, x3, x4, area, etmult = 1, transformed = TRUE)
 \arguments{
 \item{input}{data frame with P, precipitation, and E, evapotranspiration. (mm/day)}
 
+\item{x1}{Value for X1 Parameter in GR4J}
+
+\item{x2}{Value for X2 Parameter in GR4J}
+
+\item{x3}{Value for X3 Parameter in GR4J}
+
+\item{x4}{Value for X4 Parameter in GR4J}
+
 \item{area}{Study area in sq. km}
 
 \item{etmult}{Multiplier applied to Dataset$E to estimate potential evapotranspiration (default is 1)}
-
-\item{x1.func}{Value for X1 Parameter in GR4J}
-
-\item{x2.func}{Value for X2 Parameter in GR4J}
-
-\item{x3.func}{Value for X3 Parameter in GR4J}
-
-\item{x4.func}{Value for X4 Parameter in GR4J}
 
 \item{trasnformed}{Transformed parameters before use to improve identifiability}
 }

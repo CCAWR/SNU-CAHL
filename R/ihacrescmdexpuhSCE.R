@@ -48,7 +48,11 @@ ihacrescmdexpuhSCE <- function(inputdata, seed, delay = 0, f = c(0.5, 1.3), e = 
   
   nse <- NSE(Qmod, Qobs)
   
-  output <- data.frame(parameterlist, nse)
+  parameterlist$nse <- nse
+  
+  output <- parameterlist
+  
+  #output <- data.frame(parameterlist, nse)
   
   return(output)
 }
