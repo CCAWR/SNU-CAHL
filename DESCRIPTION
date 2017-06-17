@@ -12,6 +12,7 @@ Depends:
   R,
   zoo,
   xts,
+  hydroGOF,
   hydromad
 Imports:
   zoo,

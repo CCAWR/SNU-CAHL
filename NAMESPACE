@@ -3,4 +3,5 @@
 export(GOFperformance)
 export(gr4jSCE)
 export(gr4jSim)
+export(ihacrescmdexpuhSCE)
 export(rrmse)

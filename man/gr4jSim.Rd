@@ -4,11 +4,14 @@
 \alias{gr4jSim}
 \title{Outputs GR4J Run with Observed Data}
 \usage{
-gr4jSim(input, x1.func, x2.func, x3.func, x4.func, area, etmult = 1,
-  transformed = FALSE)
+gr4jSim(input, x1, x2, x3, x4, area, etmult = 1, transformed = TRUE)
 }
 \arguments{
 \item{input}{data frame with P, precipitation, and E, evapotranspiration. (mm/day)}
+
+\item{area}{Study area in sq. km}
+
+\item{etmult}{Multiplier applied to Dataset$E to estimate potential evapotranspiration (default is 1)}
 
 \item{x1.func}{Value for X1 Parameter in GR4J}
 
@@ -17,10 +20,6 @@ gr4jSim(input, x1.func, x2.func, x3.func, x4.func, area, etmult = 1,
 \item{x3.func}{Value for X3 Parameter in GR4J}
 
 \item{x4.func}{Value for X4 Parameter in GR4J}
-
-\item{area}{Study area in sq. km}
-
-\item{etmult}{Multiplier applied to Dataset$E to estimate potential evapotranspiration (default is 1, which means input Dataset$E is PET data)}
 
 \item{trasnformed}{Transformed parameters before use to improve identifiability}
 }

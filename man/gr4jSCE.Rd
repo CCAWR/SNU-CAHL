@@ -2,13 +2,14 @@
 % Please edit documentation in R/gr4jSCE.R
 \name{gr4jSCE}
 \alias{gr4jSCE}
-\title{Runs SCE Calibration}
+\title{Runs SCE Calibration for GR4J Model}
 \usage{
 gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
-  1000), x4 = c(0.5, 4), warmup = 365, ncomplex = 20, maxit = 200)
+  1000), x4 = c(0.5, 4), warmup = 365, ncomplex = 20, maxit = 200,
+  transformed = TRUE)
 }
 \arguments{
-\item{inputdata}{Input data for GR4J model (requires Data$Q, Data$P, and Data$E)}
+\item{inputdata}{Input data for GR4J model (requires Data$Q, Data$P, and Data$E) (mm/day)}
 
 \item{seed}{Random number for sampling within SCE}
 
@@ -23,7 +24,11 @@ gr4jSCE(inputdata, seed, x1 = c(1, 5000), x2 = c(-10, 10), x3 = c(1,
 \item{warmup}{Number of Days to Warmup for GR4J}
 
 \item{ncomplex}{Number of Complexes for SCE}
+
+\item{maxit}{Maximum number of iterations}
+
+\item{transformed}{GR4J Values already transformed for model performance}
 }
 \description{
-Runs SCE Calibration
+Outputs GR4J Parameters (non-transformed) and NSE value.
 }
