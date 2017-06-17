@@ -6,9 +6,8 @@
  
  Runs IHACRES CMD model with expuh routing model}
 \usage{
-ihacrescmdexpuhSim(input, delay = 0, f = c(0.5, 1.3), e = 1, d = 200,
-  shape = c(0, 100), tau_s = c(10, 1000), tau_q = c(0, 10), v_s = c(0,
-  1), warmup = 365)
+ihacrescmdexpuhSim(input, delay = 0, f, e = 1, d, shape, tau_s, tau_q, v_s,
+  warmup = 365)
 }
 \arguments{
 \item{input}{Input data (requires Data$P, and Data$E) (mm/day)}
