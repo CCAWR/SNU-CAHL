@@ -18,7 +18,7 @@
 gr4jSCE <- function(inputdata, seed, x1 = c(100,1200), x2 = c(-5,3), x3 = c(20,300), x4 = c(1.1,3), warmup = 365, ncomplex = 20, maxit = 200, transformed = FALSE) {
 
   # Preparing Hydromad Framework
-  runmodel <- hydromad(as.zoo(inputdata), sma = "gr4j", routing = "gr4jrouting", transformed = transformed)
+  runmodel <- hydromad(as.zoo(inputdata), sma = "gr4j", routing = "gr4jrouting", transformed = TRUE)
   runmodel <- update(runmodel,newpars = gr4j.transformpar(c(hydromad.getOption("gr4j"), hydromad.getOption("gr4jrouting"))))
   runmodel <- update(runmodel,etmult = 1)
   
@@ -48,14 +48,14 @@ gr4jSCE <- function(inputdata, seed, x1 = c(100,1200), x2 = c(-5,3), x3 = c(20,3
 
   # Preparing Output
   parameterlist <- coef(hydromodel)
-  parameterlist <- gr4j.transformpar(parameterlist, back = T)
+  #parameterlist <- gr4j.transformpar(parameterlist, back = T)
 
   Qmod <- fitted(hydromodel)
   Qobs <- observed(hydromodel)
 
   nse <- NSE(Qmod, Qobs)
 
-  output <- data.frame(parameterlist, nse, transformed)
+  output <- list(Qmod, Qobs, parameterlist, nse, transformed)
 
   return(output)
 }

@@ -71,9 +71,7 @@ sacramentoexpuhSCE <- function(inputdata, seed, delay = 0, uztwm = c(1, 150), uz
   
   nse <- NSE(Qmod, Qobs)
   
-  parameterlist$nse <- nse
-  
-  output <- parameterlist
+  output <- list(Qmod, Qobs, parameterlist, nse)
   
   return(output)
 }
