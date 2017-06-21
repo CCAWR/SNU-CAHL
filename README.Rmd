@@ -48,7 +48,6 @@ devtools::install_github("CCAWR/SNU-CAHL")
 library("snucahl")
 ```
 
-
 ## Using SNU-CAHL
 
 SNU-CAHL package can be used in two different manner.  One is the library portion, which contains the functions within R specific to SNU-CAHL.  The other is the `script/` folder which contains useful scripts used when running the full SNU-CAHL stack.  
